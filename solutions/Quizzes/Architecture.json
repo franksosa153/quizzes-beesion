@@ -1,0 +1,42 @@
+{
+  "systems": [
+    {
+      "name": "QuizzesAdminWebFrontend",
+      "type": "WebFrontend",
+      "x": 355,
+      "y": 304
+    },
+    {
+      "name": "QuizzesDatabase",
+      "type": "RelationalDatabase",
+      "x": 602,
+      "y": 0
+    },
+    {
+      "name": "QuizzesGameMobileApp",
+      "type": "MobileApp",
+      "x": 345,
+      "y": 131
+    },
+    {
+      "name": "QuizzesMicroservice",
+      "type": "Microservice",
+      "x": 633,
+      "y": 195
+    }
+  ],
+  "references": [
+    {
+      "fromSystemName": "QuizzesAdminWebFrontend",
+      "toSystemName": "QuizzesMicroservice"
+    },
+    {
+      "fromSystemName": "QuizzesGameMobileApp",
+      "toSystemName": "QuizzesMicroservice"
+    },
+    {
+      "fromSystemName": "QuizzesMicroservice",
+      "toSystemName": "QuizzesDatabase"
+    }
+  ]
+}
